@@ -173,7 +173,7 @@ public:
         label->setText(QCoreApplication::translate("TeamControl", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt;\">ID\357\274\232</span></p></body></html>", nullptr));
         label_2->setText(QCoreApplication::translate("TeamControl", "<html><head/><body><p><span style=\" font-size:12pt;\">\346\237\245\346\211\276\351\200\211\351\241\271\357\274\232</span></p></body></html>", nullptr));
         label_3->setText(QCoreApplication::translate("TeamControl", "<html><head/><body><p><span style=\" font-size:12pt;\">\346\237\245\346\211\276\345\206\205\345\256\271\357\274\232</span></p></body></html>", nullptr));
-        serachButton->setText(QCoreApplication::translate("TeamControl", "\346\237\245\346\211\276", nullptr));
+        serachButton->setText(QCoreApplication::translate("TeamControl", "\346\237\245\350\257\242", nullptr));
         resetButton->setText(QCoreApplication::translate("TeamControl", "\351\207\215\347\275\256", nullptr));
     } // retranslateUi
 

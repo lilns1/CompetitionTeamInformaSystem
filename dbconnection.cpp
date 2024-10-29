@@ -4,8 +4,10 @@
 
 QSqlDatabase dbconnection::db;
 bool dbconnection::initialized = false;
-QString dbconnection::username = "";
-QString dbconnection::password = "";
+QString dbconnection::username;
+QString dbconnection::password;
+QString dbconnection::adress;
+int dbconnection::port;
 
 void dbconnection::initializeConnection()
 {
@@ -13,8 +15,8 @@ void dbconnection::initializeConnection()
     {
         db = QSqlDatabase::addDatabase("QMYSQL");
 
-        db.setHostName("localhost");
-        db.setPort(3306);
+        db.setHostName(adress);
+        db.setPort(port);
         db.setDatabaseName("competition");
         db.setUserName(username);
         db.setPassword(password);
@@ -51,4 +53,14 @@ void dbconnection::setpassword(QString pd)
     password = pd;
 }
 
+void dbconnection::setadress(QString adr){
+    if(adr.isEmpty()) adress = "localhost";
+    else adress = adr;
+}
+
+void dbconnection::setport(QString pt)
+{
+    if(pt.isEmpty()) port = 3306;
+    else port = pt.toInt();
+}
 
