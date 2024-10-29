@@ -1,10 +1,11 @@
-release/competitioncontrol.o
 release/dbconnection.o
+release/deldata.o
 release/main.o
 release/teamcontrol.o
 release/teamdialog.o
 release/widget.o
-release/moc_competitioncontrol.o
+release/qrc_pic.o
+release/moc_deldata.o
 release/moc_teamcontrol.o
 release/moc_teamdialog.o
 release/moc_widget.o

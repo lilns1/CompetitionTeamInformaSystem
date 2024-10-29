@@ -22,15 +22,25 @@
      <height>361</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
   </widget>
   <widget class="QComboBox" name="sortbyBox">
    <property name="geometry">
     <rect>
-     <x>300</x>
+     <x>330</x>
      <y>30</y>
-     <width>141</width>
+     <width>111</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
    </property>
    <item>
     <property name="text">
@@ -72,6 +82,11 @@
      <height>31</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
    <item>
     <property name="text">
      <string>升序</string>
@@ -92,8 +107,17 @@
      <height>31</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
    <property name="text">
     <string>排序</string>
+   </property>
+   <property name="icon">
+    <iconset resource="pic.qrc">
+     <normaloff>:/new/prefix1/image/sort.png</normaloff>:/new/prefix1/image/sort.png</iconset>
    </property>
   </widget>
   <widget class="QLineEdit" name="idlineEdit">
@@ -115,24 +139,21 @@
      <height>41</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
    <property name="text">
     <string>插入</string>
    </property>
+   <property name="icon">
+    <iconset resource="pic.qrc">
+     <normaloff>:/new/prefix1/image/add.png</normaloff>:/new/prefix1/image/add.png</iconset>
+   </property>
   </widget>
   <widget class="QPushButton" name="deleteButton">
-   <property name="geometry">
-    <rect>
-     <x>460</x>
-     <y>470</y>
-     <width>91</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>删除</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="updateButton">
    <property name="geometry">
     <rect>
      <x>570</x>
@@ -141,8 +162,39 @@
      <height>41</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>删除</string>
+   </property>
+   <property name="icon">
+    <iconset resource="pic.qrc">
+     <normaloff>:/new/prefix1/image/delete.png</normaloff>:/new/prefix1/image/delete.png</iconset>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="updateButton">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>470</y>
+     <width>91</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
    <property name="text">
     <string>更新</string>
+   </property>
+   <property name="icon">
+    <iconset resource="pic.qrc">
+     <normaloff>:/new/prefix1/image/update.png</normaloff>:/new/prefix1/image/update.png</iconset>
    </property>
   </widget>
   <widget class="QComboBox" name="optionBox">
@@ -153,6 +205,11 @@
      <width>141</width>
      <height>41</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
    </property>
    <item>
     <property name="text">
@@ -243,8 +300,17 @@
      <height>41</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
    <property name="text">
     <string>查找</string>
+   </property>
+   <property name="icon">
+    <iconset resource="pic.qrc">
+     <normaloff>:/new/prefix1/image/filter.png</normaloff>:/new/prefix1/image/filter.png</iconset>
    </property>
   </widget>
   <widget class="QPushButton" name="resetButton">
@@ -256,11 +322,22 @@
      <height>41</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
    <property name="text">
     <string>重置</string>
    </property>
+   <property name="icon">
+    <iconset resource="pic.qrc">
+     <normaloff>:/new/prefix1/image/refresh.png</normaloff>:/new/prefix1/image/refresh.png</iconset>
+   </property>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="pic.qrc"/>
+ </resources>
  <connections/>
 </ui>

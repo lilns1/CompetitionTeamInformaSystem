@@ -246,7 +246,8 @@ Makefile: ../../CompetitionInformationManagement.pro ../../../../Qt/6.5.3/mingw_
 		../../../../Qt/6.5.3/mingw_64/lib/Qt6Sql.prl \
 		../../../../Qt/6.5.3/mingw_64/lib/Qt6Core.prl \
 		../../../../Qt/6.5.3/mingw_64/lib/Qt6EntryPoint.prl \
-		../../../../Qt/6.5.3/mingw_64/mkspecs/features/build_pass.prf
+		../../../../Qt/6.5.3/mingw_64/mkspecs/features/build_pass.prf \
+		../../pic.qrc
 	$(QMAKE) -o Makefile ..\..\CompetitionInformationManagement.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 ../../../../Qt/6.5.3/mingw_64/mkspecs/features/spec_pre.prf:
 ../../../../Qt/6.5.3/mingw_64/mkspecs/features/device_config.prf:
@@ -425,6 +426,7 @@ Makefile: ../../CompetitionInformationManagement.pro ../../../../Qt/6.5.3/mingw_
 ../../../../Qt/6.5.3/mingw_64/lib/Qt6Core.prl:
 ../../../../Qt/6.5.3/mingw_64/lib/Qt6EntryPoint.prl:
 ../../../../Qt/6.5.3/mingw_64/mkspecs/features/build_pass.prf:
+../../pic.qrc:
 qmake: FORCE
 	@$(QMAKE) -o Makefile ..\..\CompetitionInformationManagement.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 

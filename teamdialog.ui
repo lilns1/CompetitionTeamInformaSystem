@@ -34,10 +34,16 @@
    <property name="geometry">
     <rect>
      <x>280</x>
-     <y>170</y>
-     <width>171</width>
-     <height>61</height>
+     <y>159</y>
+     <width>211</width>
+     <height>81</height>
     </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
    </property>
    <property name="orientation">
     <enum>Qt::Horizontal</enum>
@@ -45,14 +51,17 @@
    <property name="standardButtons">
     <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
    </property>
+   <property name="centerButtons">
+    <bool>false</bool>
+   </property>
   </widget>
   <widget class="QLineEdit" name="worknameEdit">
    <property name="geometry">
     <rect>
      <x>80</x>
-     <y>40</y>
+     <y>30</y>
      <width>101</width>
-     <height>21</height>
+     <height>31</height>
     </rect>
    </property>
   </widget>
@@ -60,9 +69,9 @@
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>40</y>
+     <y>30</y>
      <width>53</width>
-     <height>21</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="text">
@@ -75,7 +84,7 @@
      <x>80</x>
      <y>80</y>
      <width>101</width>
-     <height>21</height>
+     <height>31</height>
     </rect>
    </property>
   </widget>
@@ -85,7 +94,7 @@
      <x>20</x>
      <y>80</y>
      <width>53</width>
-     <height>21</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="text">
@@ -98,8 +107,13 @@
      <x>80</x>
      <y>130</y>
      <width>101</width>
-     <height>22</height>
+     <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
    </property>
    <property name="contextMenuPolicy">
     <enum>Qt::DefaultContextMenu</enum>
@@ -141,7 +155,7 @@
      <x>10</x>
      <y>130</y>
      <width>71</width>
-     <height>21</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="text">
@@ -152,9 +166,9 @@
    <property name="geometry">
     <rect>
      <x>310</x>
-     <y>40</y>
+     <y>30</y>
      <width>181</width>
-     <height>21</height>
+     <height>31</height>
     </rect>
    </property>
   </widget>
@@ -162,9 +176,9 @@
    <property name="geometry">
     <rect>
      <x>220</x>
-     <y>40</y>
+     <y>30</y>
      <width>71</width>
-     <height>21</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="text">
@@ -177,7 +191,7 @@
      <x>310</x>
      <y>80</y>
      <width>181</width>
-     <height>21</height>
+     <height>31</height>
     </rect>
    </property>
   </widget>
@@ -187,7 +201,7 @@
      <x>220</x>
      <y>80</y>
      <width>71</width>
-     <height>21</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="text">

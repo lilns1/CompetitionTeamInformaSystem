@@ -2,6 +2,7 @@
 #include "ui_teamcontrol.h"
 #include "dbconnection.h"
 #include "teamdialog.h"
+#include "deldata.h"
 
 #include <QDebug>
 #include <QMessageBox>
@@ -48,10 +49,19 @@ void TeamControl::on_insertButton_clicked()
     if(td->exec() == teamDialog::Accepted)
     {
         QSqlQuery query;
-        int team_id = ui->idlineEdit->text().toInt();
 
-        QString sql = QString("insert into team_info values (%1, '%2', '%3', '%4', '%5', '%6')").arg(team_id).arg(td->getwork())
-                          .arg(td->getschool()).arg(td->getevent()).arg(td->getparticipants()).arg(td->getinstructor());
+        QString sql;
+        if (ui->idlineEdit->text().isEmpty())
+        {
+            sql = QString("insert into team_info values (default, '%2', '%3', '%4', '%5', '%6')").arg(td->getwork())
+                      .arg(td->getschool()).arg(td->getevent()).arg(td->getparticipants()).arg(td->getinstructor());
+        }
+        else
+        {
+            int team_id = ui->idlineEdit->text().toInt();
+            QString sql = QString("insert into team_info values (%1, '%2', '%3', '%4', '%5', '%6')").arg(team_id).arg(td->getwork())
+                              .arg(td->getschool()).arg(td->getevent()).arg(td->getparticipants()).arg(td->getinstructor());
+        }
 
         qDebug() << sql;
 
@@ -61,7 +71,7 @@ void TeamControl::on_insertButton_clicked()
         }
         else
         {
-            QMessageBox::critical(this, "提示", "插入操作失败", QMessageBox::Ok);
+            QMessageBox::critical(this, "提示", "插入操作失败, 请查看是否有数据为空或id重复！", QMessageBox::Ok);
         }
     }
     else
@@ -76,21 +86,9 @@ void TeamControl::on_insertButton_clicked()
 
 void TeamControl::on_deleteButton_clicked()
 {
-    QString sql = QString("delete from team_info where team_id = %1").arg(ui->idlineEdit->text());
-
-    QSqlQuery query;
-    query.prepare(sql);
-
-    if(QMessageBox::question(this, "提示", "确定要删除吗", QMessageBox::Yes | QMessageBox::No, QMessageBox::No) == QMessageBox::Yes)
-    {
-        if(query.exec() == true) QMessageBox::information(this, "提示", "删除成功");
-        else QMessageBox::critical(this, "提示", "删除失败");
-    }
-    else
-    {
-        return;
-    }
-
+    deldata *del = new deldata(this);
+    del->exec();
+    del->deleteLater();
     m->select();
 }
 
@@ -140,6 +138,8 @@ void TeamControl::on_serachButton_clicked()
 
     m->setFilter(searchcondition);
     m->select();
+
+    ui->serachButton->setText("继续查找");
 }
 
 
@@ -148,6 +148,8 @@ void TeamControl::on_resetButton_clicked()
     searchcondition = "";
     m->setFilter(searchcondition);
     m->select();
+
+    ui->serachButton->setText("查找");
 }
 
 

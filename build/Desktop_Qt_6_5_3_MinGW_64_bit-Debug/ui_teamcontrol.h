@@ -10,6 +10,7 @@
 #define UI_TEAMCONTROL_H
 
 #include <QtCore/QVariant>
+#include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QHeaderView>
@@ -48,6 +49,9 @@ public:
         tableView = new QTableView(TeamControl);
         tableView->setObjectName("tableView");
         tableView->setGeometry(QRect(50, 80, 721, 361));
+        QFont font;
+        font.setPointSize(10);
+        tableView->setFont(font);
         sortbyBox = new QComboBox(TeamControl);
         sortbyBox->addItem(QString());
         sortbyBox->addItem(QString());
@@ -56,27 +60,50 @@ public:
         sortbyBox->addItem(QString());
         sortbyBox->addItem(QString());
         sortbyBox->setObjectName("sortbyBox");
-        sortbyBox->setGeometry(QRect(300, 30, 141, 31));
+        sortbyBox->setGeometry(QRect(330, 30, 111, 31));
+        sortbyBox->setFont(font);
         orderBox = new QComboBox(TeamControl);
         orderBox->addItem(QString());
         orderBox->addItem(QString());
         orderBox->setObjectName("orderBox");
         orderBox->setGeometry(QRect(480, 30, 111, 31));
+        orderBox->setFont(font);
         sortButton = new QPushButton(TeamControl);
         sortButton->setObjectName("sortButton");
         sortButton->setGeometry(QRect(620, 30, 111, 31));
+        sortButton->setFont(font);
+        QIcon icon;
+        icon.addFile(QString::fromUtf8(":/new/prefix1/image/sort.png"), QSize(), QIcon::Normal, QIcon::Off);
+        sortButton->setIcon(icon);
         idlineEdit = new QLineEdit(TeamControl);
         idlineEdit->setObjectName("idlineEdit");
         idlineEdit->setGeometry(QRect(130, 470, 181, 41));
         insertButton = new QPushButton(TeamControl);
         insertButton->setObjectName("insertButton");
         insertButton->setGeometry(QRect(350, 470, 91, 41));
+        QFont font1;
+        font1.setFamilies({QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221")});
+        font1.setPointSize(12);
+        insertButton->setFont(font1);
+        QIcon icon1;
+        icon1.addFile(QString::fromUtf8(":/new/prefix1/image/add.png"), QSize(), QIcon::Normal, QIcon::Off);
+        insertButton->setIcon(icon1);
         deleteButton = new QPushButton(TeamControl);
         deleteButton->setObjectName("deleteButton");
-        deleteButton->setGeometry(QRect(460, 470, 91, 41));
+        deleteButton->setGeometry(QRect(570, 470, 91, 41));
+        QFont font2;
+        font2.setPointSize(12);
+        deleteButton->setFont(font2);
+        QIcon icon2;
+        icon2.addFile(QString::fromUtf8(":/new/prefix1/image/delete.png"), QSize(), QIcon::Normal, QIcon::Off);
+        deleteButton->setIcon(icon2);
         updateButton = new QPushButton(TeamControl);
         updateButton->setObjectName("updateButton");
-        updateButton->setGeometry(QRect(570, 470, 91, 41));
+        updateButton->setGeometry(QRect(460, 470, 91, 41));
+        updateButton->setFont(font2);
+        QIcon icon3;
+        icon3.addFile(QString::fromUtf8(":/new/prefix1/image/update.png"), QSize(), QIcon::Normal, QIcon::Off);
+        updateButton->setIcon(icon3);
         optionBox = new QComboBox(TeamControl);
         optionBox->addItem(QString());
         optionBox->addItem(QString());
@@ -86,6 +113,7 @@ public:
         optionBox->addItem(QString());
         optionBox->setObjectName("optionBox");
         optionBox->setGeometry(QRect(130, 530, 141, 41));
+        optionBox->setFont(font2);
         label = new QLabel(TeamControl);
         label->setObjectName("label");
         label->setGeometry(QRect(40, 470, 81, 41));
@@ -101,9 +129,17 @@ public:
         serachButton = new QPushButton(TeamControl);
         serachButton->setObjectName("serachButton");
         serachButton->setGeometry(QRect(570, 530, 91, 41));
+        serachButton->setFont(font2);
+        QIcon icon4;
+        icon4.addFile(QString::fromUtf8(":/new/prefix1/image/filter.png"), QSize(), QIcon::Normal, QIcon::Off);
+        serachButton->setIcon(icon4);
         resetButton = new QPushButton(TeamControl);
         resetButton->setObjectName("resetButton");
         resetButton->setGeometry(QRect(680, 530, 91, 41));
+        resetButton->setFont(font2);
+        QIcon icon5;
+        icon5.addFile(QString::fromUtf8(":/new/prefix1/image/refresh.png"), QSize(), QIcon::Normal, QIcon::Off);
+        resetButton->setIcon(icon5);
 
         retranslateUi(TeamControl);
 

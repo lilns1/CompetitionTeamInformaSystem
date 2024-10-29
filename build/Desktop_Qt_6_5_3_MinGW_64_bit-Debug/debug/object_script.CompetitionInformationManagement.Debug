@@ -1,10 +1,11 @@
-debug/competitioncontrol.o
 debug/dbconnection.o
+debug/deldata.o
 debug/main.o
 debug/teamcontrol.o
 debug/teamdialog.o
 debug/widget.o
-debug/moc_competitioncontrol.o
+debug/qrc_pic.o
+debug/moc_deldata.o
 debug/moc_teamcontrol.o
 debug/moc_teamdialog.o
 debug/moc_widget.o

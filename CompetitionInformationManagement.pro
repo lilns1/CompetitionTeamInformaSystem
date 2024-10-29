@@ -10,6 +10,7 @@ CONFIG += c++17
 
 SOURCES += \
     dbconnection.cpp \
+    deldata.cpp \
     main.cpp \
     teamcontrol.cpp \
     teamdialog.cpp \
@@ -17,11 +18,13 @@ SOURCES += \
 
 HEADERS += \
     dbconnection.h \
+    deldata.h \
     teamcontrol.h \
     teamdialog.h \
     widget.h
 
 FORMS += \
+    deldata.ui \
     teamcontrol.ui \
     teamdialog.ui \
     widget.ui
@@ -30,3 +33,6 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    pic.qrc

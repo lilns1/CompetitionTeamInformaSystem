@@ -10,6 +10,7 @@
 #define UI_WIDGET_H
 
 #include <QtCore/QVariant>
+#include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
@@ -34,16 +35,25 @@ public:
         Widget->resize(500, 300);
         logginButton = new QPushButton(Widget);
         logginButton->setObjectName("logginButton");
-        logginButton->setGeometry(QRect(210, 230, 91, 31));
+        logginButton->setGeometry(QRect(210, 220, 91, 41));
+        QFont font;
+        font.setPointSize(12);
+        logginButton->setFont(font);
+        QIcon icon;
+        icon.addFile(QString::fromUtf8(":/new/prefix1/image/loggin.png"), QSize(), QIcon::Normal, QIcon::Off);
+        logginButton->setIcon(icon);
         usernameEdit = new QLineEdit(Widget);
         usernameEdit->setObjectName("usernameEdit");
         usernameEdit->setGeometry(QRect(180, 70, 181, 31));
+        usernameEdit->setFont(font);
         label = new QLabel(Widget);
         label->setObjectName("label");
         label->setGeometry(QRect(90, 70, 71, 31));
         passwordEdit = new QLineEdit(Widget);
         passwordEdit->setObjectName("passwordEdit");
         passwordEdit->setGeometry(QRect(180, 140, 181, 31));
+        passwordEdit->setFont(font);
+        passwordEdit->setEchoMode(QLineEdit::Password);
         label_2 = new QLabel(Widget);
         label_2->setObjectName("label_2");
         label_2->setGeometry(QRect(90, 140, 71, 31));

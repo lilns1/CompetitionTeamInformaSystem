@@ -1,0 +1,28 @@
+# 忽略 .git 目录中的文件和文件夹（.git 本身会被自动忽略）
+.git/hooks/
+.git/info/
+.git/HEAD
+.git/description
+
+# 忽略编译生成的文件
+build/
+*.o
+*.obj
+*.so
+*.dll
+*.exe
+*.log
+*.tmp
+
+# 忽略 Qt Creator 配置文件（用户特定的配置文件）
+*.pro.user
+*.pro.user.*
+
+# 忽略 Qt 的构建目录和 CMake 构建输出
+build-*/
+*.qmake.stash
+CMakeLists.txt.user
+
+# 忽略其他常见文件
+.DS_Store
+Thumbs.db

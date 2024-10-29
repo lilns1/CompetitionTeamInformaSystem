@@ -17,13 +17,22 @@
    <property name="geometry">
     <rect>
      <x>210</x>
-     <y>230</y>
+     <y>220</y>
      <width>91</width>
-     <height>31</height>
+     <height>41</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>登录</string>
+   </property>
+   <property name="icon">
+    <iconset resource="pic.qrc">
+     <normaloff>:/new/prefix1/image/loggin.png</normaloff>:/new/prefix1/image/loggin.png</iconset>
    </property>
   </widget>
   <widget class="QLineEdit" name="usernameEdit">
@@ -34,6 +43,11 @@
      <width>181</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
    </property>
   </widget>
   <widget class="QLabel" name="label">
@@ -58,6 +72,14 @@
      <height>31</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::Password</enum>
+   </property>
   </widget>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
@@ -73,6 +95,8 @@
    </property>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="pic.qrc"/>
+ </resources>
  <connections/>
 </ui>
