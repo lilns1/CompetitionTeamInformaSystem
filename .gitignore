@@ -1,8 +1,10 @@
 # 忽略 .git 目录中的文件和文件夹（.git 本身会被自动忽略）
+.git/build/
 .git/hooks/
 .git/info/
 .git/HEAD
 .git/description
+
 
 # 忽略编译生成的文件
 build/

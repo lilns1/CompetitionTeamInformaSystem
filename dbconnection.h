@@ -13,6 +13,10 @@ public:
 
     static void setpassword(QString pd);
 
+    static void setadress(QString adr);
+
+    static void setport(QString pt);
+
 private:
     dbconnection();
     static QSqlDatabase db;
@@ -23,7 +27,8 @@ private:
 
     static QString username;
     static QString password;
-    static int adress;
+    static QString adress;
+    static int port;
 };
 
 #endif // DBCONNECTION_H

@@ -18,16 +18,18 @@ Widget::~Widget()
     delete ui;
 }
 
-
 void Widget::on_logginButton_clicked()
 {
-    QString username = ui->usernameEdit->text(), password = ui->passwordEdit->text();
-    dbconnection::setusername(username);
-    dbconnection::setpassword(password);
+    dbconnection::setadress(ui->adressEdit->text());
+    dbconnection::setport(ui->portEdit->text());
+    dbconnection::setusername(ui->usernameEdit->text());
+    dbconnection::setpassword(ui->passwordEdit->text());
 
     if(dbconnection::tryConnection() == false)
     {
         QMessageBox::critical(this, "提示", "输入密码或者用户名错误，请重新输入！");
+        ui->usernameEdit->clear();
+        ui->passwordEdit->clear();
         return;
     }
     else QMessageBox::information(this, "提示", "连接数据库成功！");

@@ -84,6 +84,7 @@ void TeamControl::on_insertButton_clicked()
 }
 
 
+
 void TeamControl::on_deleteButton_clicked()
 {
     deldata *del = new deldata(this);
@@ -139,7 +140,7 @@ void TeamControl::on_serachButton_clicked()
     m->setFilter(searchcondition);
     m->select();
 
-    ui->serachButton->setText("继续查找");
+    ui->serachButton->setText("继续查询");
 }
 
 
@@ -149,7 +150,7 @@ void TeamControl::on_resetButton_clicked()
     m->setFilter(searchcondition);
     m->select();
 
-    ui->serachButton->setText("查找");
+    ui->serachButton->setText("查询");
 }
 
 
