@@ -4,6 +4,9 @@
 #include <QWidget>
 #include <QSqlDatabase>
 #include <QSqlTableModel>
+#include <QStandardItemModel>
+#include <vector>
+#include <mydata.h>
 
 namespace Ui {
 class TeamControl;
@@ -30,15 +33,25 @@ private slots:
 
     void on_sortButton_clicked();
 
+    void on_inputButton_clicked();
+
+    void on_outputButton_clicked();
+
 private:
     Ui::TeamControl *ui;
     QSqlDatabase db;
     QSqlTableModel *m;
-    QString searchcondition;
     QString header[6] = {"team_id", "work_name", "school_name", "event_category", "participants", "instructor"};
+    QString headname[6] = {"队伍Id", "作品名称", "学校名称", "赛事类别", "参赛队员", "指导老师"};
+    QStandardItemModel *sdm;
+    std::vector<mydata> bv;
+    void setheader(QStandardItemModel *xm);
 
-    void ASCsort();
-    void DESCsort();
+    std::vector<mydata> getnow();
+
+    // QString searchcondition;
+    // void ASCsort();
+    // void DESCsort();
 
 };
 

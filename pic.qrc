@@ -8,5 +8,7 @@
         <file>image/sort.png</file>
         <file>image/update.png</file>
         <file>app_icon.ico</file>
+        <file>image/input.png</file>
+        <file>image/output.png</file>
     </qresource>
 </RCC>

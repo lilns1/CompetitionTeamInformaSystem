@@ -31,9 +31,9 @@
   <widget class="QComboBox" name="sortbyBox">
    <property name="geometry">
     <rect>
-     <x>330</x>
+     <x>450</x>
      <y>30</y>
-     <width>111</width>
+     <width>81</width>
      <height>31</height>
     </rect>
    </property>
@@ -76,9 +76,9 @@
   <widget class="QComboBox" name="orderBox">
    <property name="geometry">
     <rect>
-     <x>480</x>
+     <x>560</x>
      <y>30</y>
-     <width>111</width>
+     <width>81</width>
      <height>31</height>
     </rect>
    </property>
@@ -101,9 +101,9 @@
   <widget class="QPushButton" name="sortButton">
    <property name="geometry">
     <rect>
-     <x>620</x>
+     <x>670</x>
      <y>30</y>
-     <width>111</width>
+     <width>81</width>
      <height>31</height>
     </rect>
    </property>
@@ -333,6 +333,50 @@
    <property name="icon">
     <iconset resource="pic.qrc">
      <normaloff>:/new/prefix1/image/refresh.png</normaloff>:/new/prefix1/image/refresh.png</iconset>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="inputButton">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>30</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>导入</string>
+   </property>
+   <property name="icon">
+    <iconset resource="pic.qrc">
+     <normaloff>:/new/prefix1/image/input.png</normaloff>:/new/prefix1/image/input.png</iconset>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="outputButton">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>30</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>导出</string>
+   </property>
+   <property name="icon">
+    <iconset resource="pic.qrc">
+     <normaloff>:/new/prefix1/image/output.png</normaloff>:/new/prefix1/image/output.png</iconset>
    </property>
   </widget>
  </widget>

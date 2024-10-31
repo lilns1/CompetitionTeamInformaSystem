@@ -1,6 +1,8 @@
 release/dbconnection.o
 release/deldata.o
 release/main.o
+release/mydata.o
+release/sortteam.o
 release/teamcontrol.o
 release/teamdialog.o
 release/widget.o

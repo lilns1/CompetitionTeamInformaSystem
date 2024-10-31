@@ -12,6 +12,8 @@ SOURCES += \
     dbconnection.cpp \
     deldata.cpp \
     main.cpp \
+    mydata.cpp \
+    sortteam.cpp \
     teamcontrol.cpp \
     teamdialog.cpp \
     widget.cpp
@@ -19,6 +21,8 @@ SOURCES += \
 HEADERS += \
     dbconnection.h \
     deldata.h \
+    mydata.h \
+    sortteam.h \
     teamcontrol.h \
     teamdialog.h \
     widget.h

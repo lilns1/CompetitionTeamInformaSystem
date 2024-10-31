@@ -1,6 +1,8 @@
 debug/dbconnection.o
 debug/deldata.o
 debug/main.o
+debug/mydata.o
+debug/sortteam.o
 debug/teamcontrol.o
 debug/teamdialog.o
 debug/widget.o

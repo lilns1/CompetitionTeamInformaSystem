@@ -18,7 +18,11 @@ deldata::~deldata()
 
 void deldata::on_buttonBox_accepted()
 {
-    QString sql = QString("delete from team_info where %2 = %1").arg(header[ui->optionBox->currentIndex()]).arg(ui->lineEdit->text());
+    QString sql;
+    if(ui->optionBox->currentIndex() == 0) sql = QString("delete from team_info where %1 = %2").arg(header[ui->optionBox->currentIndex()]).arg(ui->lineEdit->text());
+    else sql = QString("delete from team_info where %1 = '%2'").arg(header[ui->optionBox->currentIndex()]).arg(ui->lineEdit->text());
+
+    qDebug() << sql;
 
     QSqlQuery query;
     query.prepare(sql);

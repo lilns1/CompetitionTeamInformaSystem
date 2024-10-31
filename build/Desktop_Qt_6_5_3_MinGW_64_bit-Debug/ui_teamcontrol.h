@@ -40,6 +40,8 @@ public:
     QLabel *label_3;
     QPushButton *serachButton;
     QPushButton *resetButton;
+    QPushButton *inputButton;
+    QPushButton *outputButton;
 
     void setupUi(QWidget *TeamControl)
     {
@@ -60,17 +62,17 @@ public:
         sortbyBox->addItem(QString());
         sortbyBox->addItem(QString());
         sortbyBox->setObjectName("sortbyBox");
-        sortbyBox->setGeometry(QRect(330, 30, 111, 31));
+        sortbyBox->setGeometry(QRect(450, 30, 81, 31));
         sortbyBox->setFont(font);
         orderBox = new QComboBox(TeamControl);
         orderBox->addItem(QString());
         orderBox->addItem(QString());
         orderBox->setObjectName("orderBox");
-        orderBox->setGeometry(QRect(480, 30, 111, 31));
+        orderBox->setGeometry(QRect(560, 30, 81, 31));
         orderBox->setFont(font);
         sortButton = new QPushButton(TeamControl);
         sortButton->setObjectName("sortButton");
-        sortButton->setGeometry(QRect(620, 30, 111, 31));
+        sortButton->setGeometry(QRect(670, 30, 81, 31));
         sortButton->setFont(font);
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/new/prefix1/image/sort.png"), QSize(), QIcon::Normal, QIcon::Off);
@@ -140,6 +142,20 @@ public:
         QIcon icon5;
         icon5.addFile(QString::fromUtf8(":/new/prefix1/image/refresh.png"), QSize(), QIcon::Normal, QIcon::Off);
         resetButton->setIcon(icon5);
+        inputButton = new QPushButton(TeamControl);
+        inputButton->setObjectName("inputButton");
+        inputButton->setGeometry(QRect(60, 30, 81, 31));
+        inputButton->setFont(font);
+        QIcon icon6;
+        icon6.addFile(QString::fromUtf8(":/new/prefix1/image/input.png"), QSize(), QIcon::Normal, QIcon::Off);
+        inputButton->setIcon(icon6);
+        outputButton = new QPushButton(TeamControl);
+        outputButton->setObjectName("outputButton");
+        outputButton->setGeometry(QRect(170, 30, 81, 31));
+        outputButton->setFont(font);
+        QIcon icon7;
+        icon7.addFile(QString::fromUtf8(":/new/prefix1/image/output.png"), QSize(), QIcon::Normal, QIcon::Off);
+        outputButton->setIcon(icon7);
 
         retranslateUi(TeamControl);
 
@@ -175,6 +191,8 @@ public:
         label_3->setText(QCoreApplication::translate("TeamControl", "<html><head/><body><p><span style=\" font-size:12pt;\">\346\237\245\346\211\276\345\206\205\345\256\271\357\274\232</span></p></body></html>", nullptr));
         serachButton->setText(QCoreApplication::translate("TeamControl", "\346\237\245\350\257\242", nullptr));
         resetButton->setText(QCoreApplication::translate("TeamControl", "\351\207\215\347\275\256", nullptr));
+        inputButton->setText(QCoreApplication::translate("TeamControl", "\345\257\274\345\205\245", nullptr));
+        outputButton->setText(QCoreApplication::translate("TeamControl", "\345\257\274\345\207\272", nullptr));
     } // retranslateUi
 
 };
